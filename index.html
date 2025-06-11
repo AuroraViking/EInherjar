@@ -153,8 +153,7 @@
 </head>
 <body>
   <header>
-    <img src="einherjar-logo.png.png" alt="Einherjar Logo">
-    
+    <img src="einherjar-logo.png" alt="Einherjar Logo">
     <div class="tagline">Elite Protection | Discreet Luxury | Viking Resolve</div>
   </header>
 
@@ -182,6 +181,34 @@
 
   <footer data-scroll>
     &copy; 2025 Einherjar Chauffeur and Bodyguard Service Iceland. All rights reserved.
-  </footer>
+  
+
+<footer data-scroll>
+<!-- Modal Form -->
+<div id="quoteModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); z-index:9999; align-items:center; justify-content:center;">
+  <div style="background:#1a1510; border:1px solid #f0c674; padding:40px; max-width:600px; width:90%; border-radius:10px; position:relative; box-shadow:0 0 20px #f0c674;">
+    <button onclick="document.getElementById('quoteModal').style.display='none'" style="position:absolute; top:15px; right:20px; background:none; border:none; color:#f0c674; font-size:24px; cursor:pointer;">&times;</button>
+    <h2 style="color:#ffcc70; text-align:center;">Request a Quote</h2>
+    <p style="color:#d2c2a2; text-align:center;">Tell us what you need and we'll get back to you.</p>
+    <form action="https://formspree.io/f/xkgbrgza" method="POST" style="display:flex; flex-direction:column; gap:15px;">
+      <input type="text" name="name" placeholder="Your Name" required style="padding:12px; font-size:1em; border:1px solid #f0c674; background:#1a1510; color:#f0c674;">
+      <input type="email" name="email" placeholder="Your Email" required style="padding:12px; font-size:1em; border:1px solid #f0c674; background:#1a1510; color:#f0c674;">
+      <textarea name="message" placeholder="Your message..." rows="5" required style="padding:12px; font-size:1em; border:1px solid #f0c674; background:#1a1510; color:#f0c674;"></textarea>
+      <button type="submit" class="button">Send</button>
+    </form>
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll('.button').forEach(btn => {
+    if (btn.textContent.includes('Request a Quote')) {
+      btn.onclick = (e) => {
+        e.preventDefault();
+        document.getElementById('quoteModal').style.display = 'flex';
+      };
+    }
+  });
+</script>
+
 </body>
 </html>
