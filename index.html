@@ -21,76 +21,86 @@
       100% { background-position: 100% 50%; }
     }
 
+    @keyframes flicker {
+      0%, 100% { opacity: 1; }
+      45% { opacity: 0.85; }
+      60% { opacity: 1; }
+      75% { opacity: 0.9; }
+    }
+
     html, body {
       margin: 0;
       padding: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #1a1510;
-      background-image: url('https://www.transparenttextures.com/patterns/wood-pattern.png');
-      background-blend-mode: multiply;
-      background-repeat: repeat;
+      background-image: linear-gradient(rgba(10,10,10,0.8), rgba(20,20,20,0.9)), url('https://images.unsplash.com/photo-1558981033-00c94e0b52b8?auto=format&fit=crop&w=1950&q=80');
+      background-size: cover;
+      background-attachment: fixed;
       color: #d4af37;
       scroll-behavior: smooth;
-      animation: pan 120s linear infinite;
+      animation: pan 240s linear infinite;
     }
 
     header {
-      background: linear-gradient(to right, #1c1c1c, #3a2b22);
+      background: rgba(0,0,0,0.6);
       text-align: center;
-      padding: 80px 20px 60px;
+      padding: 100px 20px 80px;
       border-bottom: 1px solid #333;
-      box-shadow: 0 0 40px rgba(212, 175, 55, 0.6);
+      box-shadow: 0 0 60px rgba(212, 175, 55, 0.7);
       animation: fadeInUp 2s ease-out forwards;
     }
 
     header img {
-      max-width: 220px;
+      max-width: 240px;
       margin-bottom: 20px;
-      filter: drop-shadow(0 0 18px #d4af37);
+      filter: drop-shadow(0 0 22px #d4af37);
+      animation: flicker 6s infinite;
     }
 
     h1 {
-      font-size: 3.6em;
-      letter-spacing: 2px;
+      font-size: 4em;
+      letter-spacing: 3px;
       margin: 0;
       color: #f9e7b0;
       animation: glow 4s ease-in-out infinite;
+      text-transform: uppercase;
     }
 
     .tagline {
-      font-size: 1.5em;
-      margin-top: 10px;
+      font-size: 1.6em;
+      margin-top: 15px;
       color: #c0a959;
       text-shadow: 0 0 10px #d4af37;
       font-style: italic;
     }
 
     .section {
-      padding: 100px 20px;
+      padding: 120px 20px;
       max-width: 960px;
       margin: auto;
       border-bottom: 1px solid #2a1f17;
-      background-color: rgba(27, 24, 21, 0.95);
-      box-shadow: inset 0 0 15px rgba(255, 215, 0, 0.1);
-      animation: fadeInUp 1.5s ease both;
+      background-color: rgba(15, 12, 10, 0.95);
+      box-shadow: inset 0 0 20px rgba(255, 215, 0, 0.1);
+      animation: fadeInUp 2s ease both;
     }
 
     h2 {
       color: #ffcc70;
-      font-size: 2.4em;
+      font-size: 2.6em;
       margin-bottom: 30px;
-      text-shadow: 0 0 10px #bfa74a;
+      text-shadow: 0 0 12px #bfa74a;
+      text-transform: uppercase;
     }
 
     p {
-      line-height: 1.9;
-      font-size: 1.2em;
+      line-height: 2;
+      font-size: 1.25em;
       color: #e0d4b0;
     }
 
     footer {
       text-align: center;
-      padding: 50px 20px;
+      padding: 60px 20px;
       color: #a49472;
       font-size: 1em;
       background-color: #161310;
@@ -100,21 +110,21 @@
 
     .button {
       background-color: transparent;
-      border: 1px solid #f0c674;
+      border: 2px solid #f0c674;
       color: #f0c674;
-      padding: 16px 36px;
-      font-size: 1.2em;
-      border-radius: 8px;
+      padding: 18px 40px;
+      font-size: 1.3em;
+      border-radius: 10px;
       cursor: pointer;
       transition: all 0.4s ease;
-      text-shadow: 0 0 6px #f0c674;
-      margin-top: 20px;
+      text-shadow: 0 0 8px #f0c674;
+      margin-top: 30px;
     }
 
     .button:hover {
       background-color: #f0c674;
       color: #12100e;
-      box-shadow: 0 0 25px #f0c674;
+      box-shadow: 0 0 30px #f0c674;
     }
   </style>
 </head>
