@@ -41,6 +41,17 @@
       animation: pan 240s linear infinite;
     }
 
+    [data-scroll] {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 1s ease-out;
+    }
+
+    [data-scroll].in-view {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
     header {
       background: rgba(0,0,0,0.6);
       text-align: center;
@@ -81,7 +92,6 @@
       border-bottom: 1px solid #2a1f17;
       background-color: rgba(15, 12, 10, 0.95);
       box-shadow: inset 0 0 20px rgba(255, 215, 0, 0.1);
-      animation: fadeInUp 2s ease both;
     }
 
     h2 {
@@ -105,7 +115,6 @@
       font-size: 1em;
       background-color: #161310;
       border-top: 1px solid #3a2a20;
-      animation: fadeInUp 2s ease forwards;
     }
 
     .button {
@@ -127,6 +136,20 @@
       box-shadow: 0 0 30px #f0c674;
     }
   </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const elements = document.querySelectorAll('[data-scroll]');
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+          }
+        });
+      }, { threshold: 0.1 });
+
+      elements.forEach(el => observer.observe(el));
+    });
+  </script>
 </head>
 <body>
   <header>
@@ -135,19 +158,19 @@
     <div class="tagline">Elite Protection | Discreet Luxury | Viking Resolve</div>
   </header>
 
-  <section class="section">
+  <section class="section" data-scroll>
     <h2>Our Mission</h2>
     <p>At Einherjar, we provide secure, discreet and executive-grade chauffeur and bodyguard services across Iceland. Whether it's VIP airport pickups, corporate travel, or private excursions, our team delivers professionalism rooted in the legendary strength of Norse tradition.</p>
   </section>
 
-  <section class="section">
+  <section class="section" data-scroll>
     <h2>Our Services</h2>
     <p><strong>Chauffeur Service:</strong> Travel in comfort with our fleet of premium EVs and SUVs, piloted by trained professionals.<br>
     <strong>Bodyguard Service:</strong> Licensed security operatives provide discrete and effective protection for individuals or small groups.<br>
     <strong>Custom Packages:</strong> Events, business trips, embassies, or VIPs — we tailor the service to your needs.</p>
   </section>
 
-  <section class="section">
+  <section class="section" data-scroll>
     <h2>Why Choose Us?</h2>
     <p>
       - Licensed for both transport and security<br>
@@ -157,7 +180,7 @@
     <button class="button">Request a Quote</button>
   </section>
 
-  <footer>
+  <footer data-scroll>
     &copy; 2025 Einherjar Chauffeur and Bodyguard Service Iceland. All rights reserved.
   </footer>
 </body>
