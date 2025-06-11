@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Einherjar Chauffeur and Bodyguard Service Iceland</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0d0d0d;
+      color: #d4af37;
+    }
+    header {
+      background-color: #1a1a1a;
+      text-align: center;
+      padding: 40px 20px;
+      border-bottom: 1px solid #444;
+    }
+    header img {
+      max-width: 200px;
+      margin-bottom: 20px;
+    }
+    h1 {
+      font-size: 2.5em;
+      letter-spacing: 1px;
+      margin: 0;
+    }
+    .tagline {
+      font-size: 1.2em;
+      margin-top: 10px;
+      color: #aaa;
+    }
+    .section {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: auto;
+      border-bottom: 1px solid #333;
+    }
+    h2 {
+      color: #f0c674;
+      font-size: 1.8em;
+      margin-bottom: 20px;
+    }
+    p {
+      line-height: 1.6;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #666;
+      font-size: 0.9em;
+    }
+    .button {
+      background-color: transparent;
+      border: 1px solid #d4af37;
+      color: #d4af37;
+      padding: 10px 25px;
+      font-size: 1em;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .button:hover {
+      background-color: #d4af37;
+      color: #0d0d0d;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABAAAAAYACAIAAABn4K39AAEAAElEQVR4nDT96XorW5KeCdq0BncHQO4TocyUVFKq+/7vqp8qtaSIs0kC7muyoX7gJG+AJOCDrW94Df/bf/tvZp5LWnOo+rZvQnT2zoCBkDm5w/JJAMI5GEwV3JE5PACBSQ" alt="Einherjar Logo">
+    <h1>Einherjar Chauffeur and Bodyguard Service Iceland</h1>
+    <div class="tagline">Elite Protection | Discreet Luxury | Viking Resolve</div>
+  </header>
+
+  <section class="section">
+    <h2>Our Mission</h2>
+    <p>At Einherjar, we provide secure, discreet and executive-grade chauffeur and bodyguard services across Iceland. Whether it's VIP airport pickups, corporate travel, or private excursions, our team delivers professionalism rooted in the legendary strength of Norse tradition.</p>
+  </section>
+
+  <section class="section">
+    <h2>Our Services</h2>
+    <p><strong>Chauffeur Service:</strong> Travel in comfort with our fleet of premium EVs and SUVs, piloted by trained professionals.<br>
+    <strong>Bodyguard Service:</strong> Licensed security operatives provide discrete and effective protection for individuals or small groups.<br>
+    <strong>Custom Packages:</strong> Events, business trips, embassies, or VIPs — we tailor the service to your needs.</p>
+  </section>
+
+  <section class="section">
+    <h2>Why Choose Us?</h2>
+    <p>
+      - Licensed for both transport and security<br>
+      - Run by professionals with real-world experience<br>
+      - Locally based, culturally attuned, internationally capable
+    </p>
+    <button class="button">Request a Quote</button>
+  </section>
+
+  <footer>
+    &copy; 2025 Einherjar Chauffeur and Bodyguard Service Iceland. All rights reserved.
+  </footer>
+</body>
+</html>
